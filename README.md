@@ -6,10 +6,32 @@
 [![Skills](https://img.shields.io/badge/skills-159-success)](Skills/index.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Pages](https://img.shields.io/badge/docs-github%20pages-blueviolet)](.github/workflows/pages-deploy.yml)
+[![Stars](https://img.shields.io/github/stars/eli-labz/Cognitive-Core-Skills?style=social)](https://github.com/eli-labz/Cognitive-Core-Skills/stargazers)
+[![Forks](https://img.shields.io/github/forks/eli-labz/Cognitive-Core-Skills?style=social)](https://github.com/eli-labz/Cognitive-Core-Skills/network/members)
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange)](CONTRIBUTING.md)
+[![Good first issues](https://img.shields.io/github/issues/eli-labz/Cognitive-Core-Skills/good%20first%20issue)](GOOD_FIRST_ISSUE_GUIDE.md)
 
 Cognitive core skills are the mental operating capabilities an LLM or AI Agent needs to move from chat response to useful digital co-worker. An LLM predicts and generates language. An AI Agent wraps that LLM with memory, planning, tools, integrations, verification, and action control so it can pursue goals inside real workflows.
 
 Cognitive core skills are the agent operating brain: perception to know the situation, memory to preserve continuity, reasoning to judge, planning to sequence work, action selection to execute, verification to confirm progress, learning to improve, and governance to stay safe.
+
+## Table of contents
+
+- [Repository overview](#repository-overview)
+- [Why star or fork this project](#why-star-or-fork-this-project)
+- [Quickstart](#quickstart)
+- [Current status](#current-status)
+- [Capability model differences](#capability-model-differences)
+- [Key package paths](#key-package-paths)
+- [Discussions setup guide](#discussions-setup-guide)
+- [Recent taxonomy update](#recent-taxonomy-update)
+- [Run validation locally](#run-validation-locally)
+- [Deploy through GitHub](#deploy-through-github)
+- [How to add a new skill](#how-to-add-a-new-skill)
+- [Regenerate skill markdown files](#regenerate-skill-markdown-files)
+- [Star history](#star-history)
+- [Support this project](#support-this-project)
+- [Attribution and license boundaries](#attribution-and-license-boundaries)
 
 ## Repository overview
 
@@ -206,3 +228,16 @@ This taxonomy package adapts high-level architecture/documentation patterns from
 - `third-party/knowledge-catalog-main/okf`
 
 No third-party source code is copied into taxonomy artifacts.
+
+## Star history
+
+If this taxonomy is useful to you, a star helps others discover it and tells us which direction to invest in next.
+
+[![Star History Chart](https://api.star-history.com/svg?repos=eli-labz/Cognitive-Core-Skills&type=Date)](https://star-history.com/#eli-labz/Cognitive-Core-Skills&Date)
+
+## Support this project
+
+- Star the repo to bookmark it and help with discoverability.
+- Fork the repo if you want to adapt the taxonomy, schemas, or skill cards for your own agent stack.
+- Open an issue for a missing skill, a schema question, or a benchmark idea. See `GOOD_FIRST_ISSUE_GUIDE.md` for beginner-friendly entry points.
+- Share a "Show and tell" write-up if you build something on top of this taxonomy once Discussions are enabled.
