@@ -127,37 +127,6 @@ Community and project health:
 - `.github/ISSUE_TEMPLATE/feature_request.yml`
 - `.github/pull_request_template.md`
 
-## Discussions setup guide
-
-If you enable GitHub Discussions for this repository, use this baseline structure to improve community onboarding and retention.
-
-Recommended categories:
-
-- Announcements: release highlights and roadmap updates.
-- Q and A: usage questions and troubleshooting.
-- Ideas: proposed skills, schema changes, and benchmark additions.
-- Show and tell: implementations using this taxonomy.
-- Governance: policy, review, and release process topics.
-
-Recommended pinned discussions:
-
-- Welcome and how to contribute.
-- How to propose a new skill.
-- How to submit benchmark traces.
-
-Moderation and triage suggestions:
-
-- Convert strong Ideas threads into labeled issues.
-- Route beginner-friendly threads to good first issues.
-- Link resolved questions to docs for reuse.
-- Close stale threads with pointers to current docs.
-
-Helpful companion docs:
-
-- `CONTRIBUTING.md`
-- `GOOD_FIRST_ISSUE_GUIDE.md`
-- `RELEASE_CHECKLIST.md`
-
 ## Recent taxonomy update
 
 Added human-action skill:
@@ -177,22 +146,6 @@ Purpose: maintain coherent long-horizon execution across milestones, dependencie
 ```powershell
 py -m pytest tests/test_cognitive_core_taxonomy.py tests/test_rubric_benchmark_fixtures.py -q
 ```
-
-## Deploy through GitHub
-
-This repository is now configured for GitHub-native deployment workflows.
-
-- CI workflow: `.github/workflows/taxonomy-ci.yml`
-- Pages workflow: `.github/workflows/pages-deploy.yml`
-- Docs entry page: `docs/index.md`
-- Repository license: `LICENSE`
-- Repository ignore rules: `.gitignore`
-
-For GitHub Pages deployment:
-
-1. Push to `main`.
-2. In repository settings, enable Pages with source set to GitHub Actions.
-3. The `pages-deploy` workflow will publish site content from `docs/`.
 
 ## How to add a new skill
 
