@@ -1,0 +1,6 @@
+google-adk
+google-auth
+google-cloud-bigquery
+google-cloud-dataplex
+mcp[cli]
+pyyaml

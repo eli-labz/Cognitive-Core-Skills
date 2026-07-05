@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "fileskb": {
+      "command": "${KC_ENRICH_SRC_DIR}/.venv/bin/python3",
+      "args": [
+        "${KC_ENRICH_SRC_DIR}/tools/fileskb/main.py",
+        "--dir",
+        "${KC_ENRICH_SAMPLE_DOCS_DIR}"
+      ]
+    }
+  }
+}

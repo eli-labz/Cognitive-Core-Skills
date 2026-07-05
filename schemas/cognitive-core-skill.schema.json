@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/cognitive-core-skill.schema.json",
+  "title": "Cognitive Core Skill Card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "domain",
+    "summary",
+    "definition",
+    "model_relevance",
+    "skill_type",
+    "inputs",
+    "outputs",
+    "required_capabilities",
+    "failure_modes",
+    "evaluation_questions",
+    "evaluation_signals",
+    "difficulty_level",
+    "human_review_required",
+    "example_tasks",
+    "related_skills",
+    "source_patterns"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 3
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "perception",
+        "memory",
+        "reasoning",
+        "planning",
+        "action_selection",
+        "verification",
+        "grounding",
+        "governance",
+        "text_based",
+        "human_action",
+        "world_model",
+        "llm_wiki",
+        "okf"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "definition": {
+      "type": "string",
+      "minLength": 20
+    },
+    "model_relevance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "llm",
+        "slm",
+        "agent",
+        "world_model"
+      ],
+      "properties": {
+        "llm": {
+          "type": "string",
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        "slm": {
+          "type": "string",
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        "agent": {
+          "type": "string",
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        "world_model": {
+          "type": "string",
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        }
+      }
+    },
+    "skill_type": {
+      "type": "string",
+      "enum": [
+        "cognitive",
+        "operational",
+        "governance",
+        "knowledge_management",
+        "evaluation"
+      ]
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "required_capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "evaluation_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "evaluation_signals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "difficulty_level": {
+      "type": "string",
+      "enum": [
+        "basic",
+        "intermediate",
+        "advanced",
+        "frontier"
+      ]
+    },
+    "human_review_required": {
+      "type": "string",
+      "enum": [
+        "never",
+        "sometimes",
+        "often",
+        "always"
+      ]
+    },
+    "example_tasks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "related_skills": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9_]+$"
+      }
+    },
+    "source_patterns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    }
+  }
+}

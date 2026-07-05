@@ -1,0 +1,165 @@
+{
+  "benchmark_id": "cognitive-core-rubric-benchmarks-v1",
+  "version": "1.0.0",
+  "generated_on": "2026-07-05",
+  "rubric_source": "docs/cognitive-core-skills/evaluation-rubric.md",
+  "dimensions": [
+    "accuracy",
+    "consistency",
+    "latency",
+    "generalization",
+    "recoverability",
+    "grounding",
+    "explainability",
+    "auditability",
+    "human_oversight_compatibility",
+    "production_readiness"
+  ],
+  "fixtures": [
+    {
+      "fixture_id": "fx_text_policy_summary",
+      "skill_id": "txt_summarization",
+      "domain": "text_based",
+      "task": "Summarize a policy memo with citations and escalation conditions.",
+      "trace_ref": "examples/agent-skill-assessment.md",
+      "scores": {
+        "accuracy": 4,
+        "consistency": 4,
+        "latency": 4,
+        "generalization": 3,
+        "recoverability": 3,
+        "grounding": 4,
+        "explainability": 4,
+        "auditability": 4,
+        "human_oversight_compatibility": 4,
+        "production_readiness": 4
+      },
+      "expected_level": 4,
+      "evidence": [
+        "Output preserved all required policy constraints.",
+        "All critical claims included source links.",
+        "Escalation pathway was included in summary."
+      ]
+    },
+    {
+      "fixture_id": "fx_slm_intent_route",
+      "skill_id": "txt_intent_routing",
+      "domain": "text_based",
+      "task": "Classify incoming ticket into one of six workflow routes.",
+      "trace_ref": "examples/agent-skill-assessment.md",
+      "scores": {
+        "accuracy": 4,
+        "consistency": 5,
+        "latency": 5,
+        "generalization": 3,
+        "recoverability": 3,
+        "grounding": 3,
+        "explainability": 3,
+        "auditability": 4,
+        "human_oversight_compatibility": 4,
+        "production_readiness": 4
+      },
+      "expected_level": 4,
+      "evidence": [
+        "Intent class matched gold labels in 92 percent of sampled traces.",
+        "Routing output schema validated in all tested traces."
+      ]
+    },
+    {
+      "fixture_id": "fx_agent_crm_update",
+      "skill_id": "ha_crm_record_update_action",
+      "domain": "human_action",
+      "task": "Update renewal_date in CRM and verify persisted value.",
+      "trace_ref": "examples/agent-skill-assessment.md",
+      "scores": {
+        "accuracy": 3,
+        "consistency": 3,
+        "latency": 3,
+        "generalization": 3,
+        "recoverability": 4,
+        "grounding": 4,
+        "explainability": 3,
+        "auditability": 4,
+        "human_oversight_compatibility": 4,
+        "production_readiness": 3
+      },
+      "expected_level": 3,
+      "evidence": [
+        "Verification step detected and retried stale form states.",
+        "Action trace captured field-level change and timestamp."
+      ]
+    },
+    {
+      "fixture_id": "fx_world_state_transition",
+      "skill_id": "wm_state_transition_prediction",
+      "domain": "world_model",
+      "task": "Predict queue-state transitions under alternate routing policies.",
+      "trace_ref": "examples/agent-skill-assessment.md",
+      "scores": {
+        "accuracy": 3,
+        "consistency": 3,
+        "latency": 3,
+        "generalization": 3,
+        "recoverability": 2,
+        "grounding": 3,
+        "explainability": 3,
+        "auditability": 3,
+        "human_oversight_compatibility": 3,
+        "production_readiness": 3
+      },
+      "expected_level": 3,
+      "evidence": [
+        "Predicted transition order matched baseline in common scenarios.",
+        "Edge-case drift requires manual review."
+      ]
+    },
+    {
+      "fixture_id": "fx_llm_wiki_ingest",
+      "skill_id": "llmw_source_ingestion",
+      "domain": "llm_wiki",
+      "task": "Ingest new source, update entity pages, index.md, and log.md.",
+      "trace_ref": "examples/agent-skill-assessment.md",
+      "scores": {
+        "accuracy": 4,
+        "consistency": 4,
+        "latency": 3,
+        "generalization": 4,
+        "recoverability": 3,
+        "grounding": 4,
+        "explainability": 4,
+        "auditability": 5,
+        "human_oversight_compatibility": 4,
+        "production_readiness": 4
+      },
+      "expected_level": 4,
+      "evidence": [
+        "All modified pages included source mappings.",
+        "Append-only log update was preserved."
+      ]
+    },
+    {
+      "fixture_id": "fx_okf_catalog_entry",
+      "skill_id": "okf_machine_readable_entries",
+      "domain": "okf",
+      "task": "Create machine-readable catalog entry with provenance and review metadata.",
+      "trace_ref": "examples/agent-skill-assessment.md",
+      "scores": {
+        "accuracy": 4,
+        "consistency": 4,
+        "latency": 4,
+        "generalization": 3,
+        "recoverability": 3,
+        "grounding": 4,
+        "explainability": 4,
+        "auditability": 5,
+        "human_oversight_compatibility": 4,
+        "production_readiness": 4
+      },
+      "expected_level": 4,
+      "evidence": [
+        "Entry parsed against schema and preserved required metadata.",
+        "Provenance chain linked to source and reviewer state."
+      ]
+    }
+  ]
+}

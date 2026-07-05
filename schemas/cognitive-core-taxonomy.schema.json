@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/cognitive-core-taxonomy.schema.json",
+  "title": "Cognitive Core Taxonomy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "taxonomy_id",
+    "version",
+    "title",
+    "description",
+    "core_definition",
+    "executive_framing",
+    "domains",
+    "skills",
+    "relationships"
+  ],
+  "properties": {
+    "taxonomy_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "core_definition": {
+      "type": "string"
+    },
+    "executive_framing": {
+      "type": "string"
+    },
+    "domains": {
+      "type": "array",
+      "minItems": 13,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "definition"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "perception",
+              "memory",
+              "reasoning",
+              "planning",
+              "action_selection",
+              "verification",
+              "grounding",
+              "governance",
+              "text_based",
+              "human_action",
+              "world_model",
+              "llm_wiki",
+              "okf"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "minItems": 80,
+      "items": {
+        "$ref": "./cognitive-core-skill.schema.json"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "parent",
+          "child",
+          "relation"
+        ],
+        "properties": {
+          "parent": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$"
+          },
+          "child": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$"
+          },
+          "relation": {
+            "type": "string",
+            "enum": [
+              "enables",
+              "supports",
+              "constrains",
+              "informs",
+              "specifies",
+              "depends_on",
+              "related_to"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
