@@ -15,24 +15,6 @@ Cognitive core skills are the mental operating capabilities an LLM or AI Agent n
 
 Cognitive core skills are the agent operating brain: perception to know the situation, memory to preserve continuity, reasoning to judge, planning to sequence work, action selection to execute, verification to confirm progress, learning to improve, and governance to stay safe.
 
-## Table of contents
-
-- [Repository overview](#repository-overview)
-- [Why star or fork this project](#why-star-or-fork-this-project)
-- [Quickstart](#quickstart)
-- [Current status](#current-status)
-- [Capability model differences](#capability-model-differences)
-- [Key package paths](#key-package-paths)
-- [Discussions setup guide](#discussions-setup-guide)
-- [Recent taxonomy update](#recent-taxonomy-update)
-- [Run validation locally](#run-validation-locally)
-- [Deploy through GitHub](#deploy-through-github)
-- [How to add a new skill](#how-to-add-a-new-skill)
-- [Regenerate skill markdown files](#regenerate-skill-markdown-files)
-- [Star history](#star-history)
-- [Support this project](#support-this-project)
-- [Attribution and license boundaries](#attribution-and-license-boundaries)
-
 ## Repository overview
 
 This repository contains a universal, industry-neutral taxonomy package for:
